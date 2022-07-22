@@ -2,13 +2,16 @@ import Webcam from 'react-webcam';
 import {Hands} from '@mediapipe/hands'; 
 import * as hands from '@mediapipe/hands';
 import * as cam from '@mediapipe/camera_utils';
+import * as draw from '@mediapipe/drawing_utils';
 import {useRef, useEffect, useState} from 'react';
 import * as ml5 from "ml5";
+import './App.css';
 
-
-function HandTracker(){
+function App()
+{
   const webCamRef = useRef(null);
   const canvasRef = useRef(null);
+  let canvasCtx;
   const [prediction, setPrediction] = useState(null);
   let camera = null;  
   let classifier = null;
@@ -25,6 +28,23 @@ function HandTracker(){
 
   const onResults = (results)=>{
     // console.log(results);
+    // Draw
+    canvasCtx.save();
+    canvasCtx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+    canvasCtx.drawImage(
+      results.image, 0, 0, canvasRef.current.width, canvasRef.current.height
+    );
+    if (results.multiHandLandmarks)
+    {
+      for (const landmarks of results.multiHandLandmarks) {
+        draw.drawConnectors(canvasCtx, landmarks, hands.HAND_CONNECTIONS,
+          {color: '#00FF00', lineWidth: 5});
+        draw.drawLandmarks(canvasCtx, landmarks, {color: '#FF0000', lineWidth: 2});
+      }
+    }
+    canvasCtx.restore();
+
+    // predict
     const landmarks = results.multiHandLandmarks;
     if (landmarks)
     {
@@ -49,6 +69,9 @@ function HandTracker(){
   }
 
   useEffect(()=>{
+    // set up canvas
+    canvasCtx = canvasRef.current.getContext('2d');
+
     // load classifier
     const options = {
       task: 'classification'
@@ -92,11 +115,16 @@ function HandTracker(){
 
   return(
     <div>
+    <canvas width={640} height={500} ref={canvasRef}/> 
+    <br/>
+    <br/>
+    {prediction && <div style={{marginLeft:"50px", fontSize:"100px"}}>Letter: {prediction[0].label} <br/> Confidence: {(prediction[0].confidence*100).toFixed(2)}%</div>}
+    <br/>
     <Webcam ref={webCamRef} />
-    <canvas ref={canvasRef}/> 
-    {prediction && <div>{prediction[0].label}: {prediction[0].confidence}</div>}
+    <br/>
+
     </div>
   )
 }
 
-export default HandTracker;
+export default App;

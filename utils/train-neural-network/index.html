@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training ML Model</title>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="script.js"></script>
+    
+    <style>
+        table, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    Epochs <input type="number" id='epochs' value="10"/>
+    <br/>
+    Learning Rate <input type="number" id='learning' value="0.1"/>
+    <br/>
+    Batch Size <input type="number" id='batch' value="32"/>
+    <br/>
+    <button onclick="createNN()">Train Neural Network</button>
+    <button onclick="debug()">Debug</button>
+    <br/>
+    <p id="message"></p>
+    <table id="stats"></table>
+    <div id="placeholder"></div>
+</body>
+</html>
