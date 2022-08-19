@@ -12,7 +12,7 @@ function Practice()
   const webCamRef = useRef(null);
   const canvasRef = useRef(null);
   let canvasCtx;
-  const [prediction, setPrediction] = useState(null);
+  const [prediction, setPrediction] = useState([{label: 'A', confidence: 0.69420}]);
   let camera = null;  
   let classifier = null;
   let modelLoaded = null;
@@ -117,20 +117,47 @@ function Practice()
 
 
   return(
-    <div className="flex flex-col md:flex-row justify-center align-middle h-screen">
+    <div className="flex flex-col lg:flex-row justify-center align-middle h-screen gap-10">
       
-      {/* Prediction Info */}
-      {/* <div className="h-auto inline-block border-8">
-        <p>Current Prediction</p>
-        {prediction && <p>Letter: {prediction[0].label} <br/> Confidence: {(prediction[0].confidence*100).toFixed(2)}%</p>}
-      </div> */}
+
+      {/* Letter Info */}
+      <div className="flex flex-row lg:flex-col lg:w-1/3 min-w-fit justify-center w-full lg:max-w-[750px] align-middle">
+        <div className="flex flex-row lg:flex-col lg:gap-10">
+          <div className="flex flex-row justify-between">
+            {/* Alphabet Letter */}
+            <div className=" text-9xl alphabet-outline">
+              A
+            </div>
+            {/* ASL Letter */}
+            <div className="font-gallaudet text-15xl leading-10 alphabet-outline">
+              A
+            </div>
+          </div>
+
+
+          {/* Prediction Info */}
+          <div className="flex flex-col border-8 h-auto text-center gap-4 alphabet-outline">
+            <p className="text-3xl">Current Prediction</p>
+            {prediction && 
+              <>
+                <div className="flex flex-row gap-x-7 justify-center">
+                  <p class="text-8xl">{prediction[0].label}</p>
+                  <p class="font-gallaudet text-12xl leading-3">{prediction[0].label}</p>
+                </div>
+                <p class="text-1xl">Confidence: {(prediction[0].confidence*100).toFixed(2)}%</p>
+              </>
+            }
+          </div>
+
+        </div>
+      </div>
 
       {/* Webcam Output */}
       <div className="flex flex-col justify-center text-center gap-1">
-        <h2 className="text-2xl">Make the letter with your hand</h2>
+        <p className="text-2xl">Make the letter with your hand</p>
         <canvas className="border-8 border-green-module-text border-solid rounded-md" width={640} height={500} ref={canvasRef}/> 
       </div>
-      <Webcam ref={webCamRef} />
+      {/* <Webcam ref={webCamRef} /> */}
 
     </div>
   )

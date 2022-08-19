@@ -1,7 +1,6 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Practice from "./pages/Practice/Practice";
 import Landing from "./pages/Landing/Landing";
-import './index.css';
 
 function App()
 {
