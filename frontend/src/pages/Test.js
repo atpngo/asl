@@ -5,7 +5,7 @@ function Test()
 {
     return(
         <div>
-            <Sign letter={"A"}/>
+            <Sign value="C" size="20rem" color="orange"/>
         </div>
     )
 }
