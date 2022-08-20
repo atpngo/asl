@@ -14,20 +14,20 @@
 }
 
 .alphabet-outline {
-  @apply p-12 text-center border-8 border-green-module rounded-md;
-  cursor: default;
-  -webkit-user-select: none; /* Safari */        
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
+  @apply text-center border-8 border-green-module rounded-xl;
+  /* cursor: default; */
+  /* -webkit-user-select: none;      
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;  */
 }
 
 p {
   cursor: default;
-  -webkit-user-select: none; /* Safari */        
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
 } 
 
 
