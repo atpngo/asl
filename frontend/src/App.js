@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Practice from "./pages/Practice/Practice";
 import Landing from "./pages/Landing/Landing";
+import Test from "./pages/Test";
 
 function App()
 {
@@ -11,6 +12,7 @@ function App()
         <Routes>
           <Route path="/" element={<Landing/>}/>
           <Route path="/practice" element={<Practice/>}/>
+          <Route path="/test" element={<Test/>}/>
         </Routes>
       </Router>
     </div>
