@@ -132,8 +132,8 @@ function Practice()
               </div>
             </div>
             {/* ASL Letter */}
-            <div className="alphabet-outline lg:p-2 p-0 flex flex-col justify-center">
-              <Sign value="A" color="black" className="lg:w-40 w-20"/>
+            <div className="alphabet-outline lg:p-8 p-0 flex flex-col justify-center">
+              <Sign value="A" color="black" className="lg:w-28 w-20"/>
             </div>
           </div>
 
@@ -158,9 +158,9 @@ function Practice()
       {/* Webcam Output */}
       <div className="flex flex-col justify-center align-middle items-center text-center gap-1">
         <p className="text-2xl">Make the letter with your hand</p>
-        <canvas className="border-8 border-green-module-text border-solid rounded-xl max-w-full lg:max-w-full" width={640} height={500} ref={canvasRef}/> 
+        <canvas className="border-12 border-green-module-text border-solid rounded-3xl max-w-full lg:max-w-full" width={640} height={500} ref={canvasRef}/> 
       </div>
-      {/* <Webcam ref={webCamRef} /> */}
+      <Webcam ref={webCamRef} />
 
     </div>
   )

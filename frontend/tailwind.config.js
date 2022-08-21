@@ -21,6 +21,11 @@ module.exports = {
         '14xl': '18rem',
         '15xl': '20rem',
       },
+      borderWidth: {
+        '10': '10px',
+        '12': '12px',
+        '14': '14px'
+      },
     },
     
   },

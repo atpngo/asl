@@ -14,12 +14,15 @@
 }
 
 .alphabet-outline {
-  @apply text-center border-8 border-green-module rounded-xl;
-  /* cursor: default; */
-  /* -webkit-user-select: none;      
-  -moz-user-select: none; 
-  -ms-user-select: none; 
-  user-select: none;  */
+  @apply text-center border-10 border-green-module rounded-2xl;
+}
+
+.alphabet-outline-dark {
+  @apply text-center border-10 border-green-module-text rounded-2xl;
+}
+
+.thick-outline {
+  @apply text-center border-green-module rounded-3xl border-12 shadow-xl
 }
 
 p {
