@@ -37,7 +37,7 @@ import {ReactComponent as Number8} from '../alphabet/8.svg';
 import {ReactComponent as Number9} from '../alphabet/9.svg';
 
 
-function Sign({ value, size, color, className })
+function Sign({ value, color, className })
 {   
     const dict = {
         'A' : <A fill={color}/>,
@@ -78,12 +78,9 @@ function Sign({ value, size, color, className })
         '9' : <Number9 fill={color}/>,
     }
 
-    // let dimensions = size || '200px';
-
     return(
-        // <div className={className} style={{width: size, height: size}}>
         <div className={className}>
-            {dict[value]}
+            {dict[value.toUpperCase()]}
         </div>
     )
 }

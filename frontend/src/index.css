@@ -13,6 +13,22 @@
   }
 }
 
+.unselectable {
+  cursor: default;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+p {
+  @apply unselectable
+} 
+
+input[type=button]
+{
+  outline: none;
+}
 .alphabet-outline {
   @apply text-center border-10 border-green-module rounded-2xl;
 }
@@ -25,13 +41,22 @@
   @apply text-center border-green-module rounded-3xl border-12 shadow-xl
 }
 
-p {
-  cursor: default;
-  -webkit-user-select: none; 
-  -moz-user-select: none; 
-  -ms-user-select: none; 
-  user-select: none; 
-} 
+.expand-btn:hover {
+  transform: scale(1.1);
+}
+
+.landing-btn {
+  @apply unselectable text-center border-[5px] rounded-2xl max-w-[250px] p-3 shadow-xl w-[250px];
+  transition: 0.5s;
+}
+
+
+.landing-btn:active {  
+  transform: scale(1.1);
+  -webkit-transition: transform 0.05s ease-in-out;
+}
+
+
 
 
 /* body {

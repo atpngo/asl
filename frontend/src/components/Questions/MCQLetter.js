@@ -23,9 +23,9 @@ function MCQLetter({prompt, answer, options, variant})
                     
                     {options.map((option, index) => {
                         return(
-                            <div className="alphabet-outline-dark p-5 w-36">
+                            <button className="alphabet-outline-dark p-5 w-36 expand-btn">
                                 <p className="text-7xl p-0 m-0">{option}</p>
-                            </div>
+                            </button>
                         )
                     })}
                 </div>
