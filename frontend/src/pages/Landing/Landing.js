@@ -6,7 +6,6 @@ function Landing()
     const navigate = useNavigate();
 
     useEffect(() => {
-        navigate('/practice')
     }, []);
 
     return(
@@ -15,7 +14,7 @@ function Landing()
                 Welcome!
             </p>
             <p className="text-green-500 text-lg">
-                React and Tailwind CSS in action
+                There's nothing here yet but I'm workin on it
             </p>
         </div>
     );
