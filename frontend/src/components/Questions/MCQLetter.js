@@ -28,7 +28,7 @@ function MCQLetter({answer, options, variant, callback })
                     
                     {options.map((option, index) => {
                         return(
-                            <OptionButton key={index} callback={() => callback(option, answer)}>
+                            <OptionButton key={index} callback={() => callback(option, answer)} correct={option === answer}>
                                 <p className="text-7xl p-0 m-0">{option}</p>
                             </OptionButton>
 
