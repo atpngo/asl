@@ -1,7 +1,7 @@
 import React from "react";
 import Sign from "../Sign";
 import BackendManager from "../../utils/BackendManager";
-
+import OptionButton from "./OptionButton";
 
 function MCQLetter({answer, options, variant, callback })
 {
@@ -28,9 +28,10 @@ function MCQLetter({answer, options, variant, callback })
                     
                     {options.map((option, index) => {
                         return(
-                            <button key={index} className="alphabet-outline-dark p-5 w-36 expand-btn" onClick={() => callback(option, answer)}>
+                            <OptionButton key={index} callback={() => callback(option, answer)}>
                                 <p className="text-7xl p-0 m-0">{option}</p>
-                            </button>
+                            </OptionButton>
+
                         )
                     })}
                 </div>

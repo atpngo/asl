@@ -29,6 +29,7 @@ input[type=button]
 {
   outline: none;
 }
+
 .alphabet-outline {
   @apply text-center border-10 border-green-module rounded-2xl;
 }
