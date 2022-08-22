@@ -16,7 +16,7 @@ function MCQLetter({answer, options, variant, callback })
         <div className="flex flex-col items-center gap-12">
             {/* Prompt */}
             <div className="mt-10 thick-outline w-4/5 p-10 flex justify-center">
-                {variant === 'select' ? <p>{answer}</p> : <Sign className="w-full max-w-[350px]" value={answer}/>}
+                {variant === 'select' ? <p className="text-9xl lg:text-12xl p-0 m-0">{answer}</p> : <Sign className="w-full max-w-[350px]" value={answer}/>}
             </div>
 
             {/* What letter is this? */}
@@ -29,7 +29,7 @@ function MCQLetter({answer, options, variant, callback })
                     {options.map((option, index) => {
                         return(
                             <OptionButton key={index} callback={() => callback(option, answer)} correct={option === answer}>
-                                <p className="text-7xl p-0 m-0">{option}</p>
+                                {variant === 'select' ? <Sign className="w-100" value={option}/> : <p className="text-7xl p-0 m-0">{option}</p>}
                             </OptionButton>
 
                         )
