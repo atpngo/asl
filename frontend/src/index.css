@@ -41,8 +41,9 @@ input[type=button]
   @apply text-center border-green-module rounded-3xl border-12 shadow-xl
 }
 
-.expand-btn:hover {
+.expand-btn:active {
   transform: scale(1.1);
+  -webkit-transition: transform 0.05s ease-in-out;
 }
 
 .landing-btn {

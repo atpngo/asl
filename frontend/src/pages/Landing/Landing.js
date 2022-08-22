@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import LandingButton from "../../components/LandingButton";
 import Sign from "../../components/Sign";
-
+import BackendManager from "../../utils/BackendManager";
 
 function Landing()
 {
@@ -10,6 +10,7 @@ function Landing()
     const signfingo_letters = 'SIGNFINGO'.split("");
 
     useEffect(() => {
+        console.log(BackendManager.model);
     }, []);
 
     return(
