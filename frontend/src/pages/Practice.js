@@ -6,7 +6,7 @@ import { Howl } from 'howler';
 import { motion, AnimatePresence } from "framer-motion";
 
 
-function Learn()
+function Practice()
 {
     const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
@@ -108,4 +108,4 @@ function Learn()
     )
 }
 
-export default Learn;
+export default Practice;

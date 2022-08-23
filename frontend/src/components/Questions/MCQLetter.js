@@ -13,10 +13,10 @@ function MCQLetter({answer, options, variant, callback })
 
 
     return(
-        <div className="flex flex-col items-center gap-12">
+        <div className="flex flex-col items-center gap-12 h-screen justify-center">
             {/* Prompt */}
-            <div className="mt-10 thick-outline w-4/5 p-10 flex justify-center">
-                {variant === 'select' ? <p className="text-9xl lg:text-12xl p-0 m-0">{answer}</p> : <Sign className="w-full max-w-[350px]" value={answer}/>}
+            <div className="thick-outline w-4/5 p-10 flex justify-center">
+                {variant === 'select' ? <p className="text-9xl lg:text-12xl p-0 m-0">{answer}</p> : <Sign className="w-full max-w-[300px]" value={answer}/>}
             </div>
 
             {/* What letter is this? */}

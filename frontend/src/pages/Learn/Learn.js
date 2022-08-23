@@ -5,10 +5,10 @@ import * as cam from '@mediapipe/camera_utils';
 import * as draw from '@mediapipe/drawing_utils';
 import {useRef, useEffect, useState} from 'react';
 import * as ml5 from "ml5";
-import './Practice.css';
+import './Learn.css';
 import Sign from '../../components/Sign';
 
-function Practice()
+function Learn()
 {
   const webCamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -166,4 +166,4 @@ function Practice()
   )
 }
 
-export default Practice;
+export default Learn;

@@ -24,11 +24,11 @@ function Landing()
             </div>
 
             <div className="flex flex-col max-w-full items-center gap-4 lg:flex-row">
-                <LandingButton color="#8EF160">
-                    GET STARTED
+                <LandingButton color="#8EF160" onClick={() => navigate('/practice')}>
+                    PRACTICE
                 </LandingButton>
-                <LandingButton color="#49B17F">
-                    SIGN IN
+                <LandingButton color="#49B17F" onClick={() => navigate('/learn')}>
+                    LEARN
                 </LandingButton>
             </div>
         </div>

@@ -21,7 +21,7 @@ function LandingButton(props)
     }
 
     return(
-        <button className="landing-btn" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} style={hover ? hoverStyle : style}>
+        <button className="landing-btn" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} style={hover ? hoverStyle : style} onClick={props.onClick}>
             <p className="text-xl">{props.children}</p>
         </button>
     )

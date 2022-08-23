@@ -1,8 +1,8 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Practice from "./pages/Practice/Practice";
+import Learn from "./pages/Learn/Learn";
 import Landing from "./pages/Landing/Landing";
 import Test from "./pages/Test";
-import Learn from "./pages/Learn";
+import Practice from "./pages/Practice";
 
 function App()
 {
