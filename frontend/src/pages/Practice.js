@@ -11,7 +11,6 @@ function Practice()
     const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
     const [current, setCurrent] = useState();
-    const [next, setNext] = useState();
     const [sounds, setSounds] = useState({});
 
     useEffect(() => {

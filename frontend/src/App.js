@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Learn from "./pages/Learn/Learn";
-import Landing from "./pages/Landing/Landing";
+import Landing from "./pages/Landing";
 import Test from "./pages/Test";
 import Practice from "./pages/Practice";
 

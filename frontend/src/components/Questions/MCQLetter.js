@@ -1,6 +1,5 @@
 import React from "react";
 import Sign from "../Sign";
-import BackendManager from "../../utils/BackendManager";
 import OptionButton from "./OptionButton";
 
 function MCQLetter({answer, options, variant, callback })

@@ -30,7 +30,6 @@ function Learn()
   const onResults = (results)=>{
     // console.log(results);
     // Draw
-    let offset = 20;
     canvasCtx.save();
     canvasCtx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
     canvasCtx.drawImage(
@@ -41,8 +40,8 @@ function Learn()
     {
       for (const landmarks of results.multiHandLandmarks) {
         draw.drawConnectors(canvasCtx, landmarks, hands.HAND_CONNECTIONS,
-          {color: '#00FF00', lineWidth: 5});
-        draw.drawLandmarks(canvasCtx, landmarks, {color: '#FF0000', lineWidth: 2});
+          {color: '#8EF160', lineWidth: 5});
+        draw.drawLandmarks(canvasCtx, landmarks, {color: '#49B17F', lineWidth: 2});
       }
     }
     canvasCtx.restore();
@@ -82,9 +81,9 @@ function Learn()
     }
     classifier = ml5.neuralNetwork(options);
     const modelDetails = {
-      model: 'http://localhost:4000/model/model.json',
-      metadata: 'http://localhost:4000/model/model_meta.json',
-      weights: 'http://localhost:4000/model/model.weights.bin'
+      model: `${process.env.REACT_APP_BACKEND}/model.json`,
+      metadata: `${process.env.REACT_APP_BACKEND}/model_meta.json`,
+      weights: `${process.env.REACT_APP_BACKEND}/model.weights.bin`
     }
 
     classifier.load(modelDetails, modelDoneLoading);
