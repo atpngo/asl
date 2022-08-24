@@ -84,16 +84,12 @@ function Practice()
                 />
     }
 
-    // setTimeout(() => {
-    //     setCurrent(false);
-    // }, 2000);
-
     return(
         <div>
             <AnimatePresence>
                 {current && 
                     <motion.div
-                        key="test"
+                        key="practice"
                         initial={{y: "0", opacity: 0, scale: 0.5}}
                         animate={{y: 0, opacity: 1, scale: 1}}
                         exit={{y: "50%", opacity: 0}}
