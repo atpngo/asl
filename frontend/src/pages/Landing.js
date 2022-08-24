@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import LandingButton from "../components/LandingButton";
 import Sign from "../components/Sign";
+import SlidingButton from "../components/SlidingButton";
 
 function Landing()
 {
@@ -22,12 +22,12 @@ function Landing()
             </div>
 
             <div className="flex flex-col max-w-full items-center gap-4 lg:flex-row">
-                <LandingButton color="#8EF160" onClick={() => navigate('/practice')}>
+                <SlidingButton color="#8EF160" onClick={() => navigate('/practice')}>
                     PRACTICE
-                </LandingButton>
-                <LandingButton color="#49B17F" onClick={() => navigate('/learn')}>
+                </SlidingButton>
+                <SlidingButton color="#49B17F" onClick={() => navigate('/learn')}>
                     LEARN
-                </LandingButton>
+                </SlidingButton>
             </div>
         </div>
     );
