@@ -7,6 +7,7 @@ import {useRef, useEffect, useState} from 'react';
 import * as ml5 from "ml5";
 import './Learn.css';
 import Sign from '../../components/Sign';
+import { motion } from "framer-motion";
 
 function Learn()
 {
@@ -117,7 +118,12 @@ function Learn()
 
 
   return(
-    <div className="flex flex-col lg:flex-row justify-center align-middle items-center lg:h-screen gap-10">
+    <motion.div 
+      key="learn"
+      initial={{y: 0, opacity: 0, scale: 0.5}}
+      animate={{y: 0, opacity: 1, scale: 1}}
+      transition={{duration: 0.3, ease: "easeOut"}}
+      className="flex flex-col lg:flex-row justify-center align-middle items-center lg:h-screen gap-10">
       
 
       {/* Letter Info */}
@@ -161,7 +167,7 @@ function Learn()
       </div>
       <Webcam ref={webCamRef} />
 
-    </div>
+    </motion.div>
   )
 }
 
