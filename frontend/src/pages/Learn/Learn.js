@@ -129,18 +129,17 @@ function Learn()
       {/* Letter Info */}
       <div className="flex flex-row lg:flex-col lg:w-1/3 min-w-fit justify-center w-full lg:max-w-[750px] align-middle">
         <div className="flex flex-row lg:flex-col lg:gap-10">
-          <div className="flex flex-row justify-evenly">
-            {/* Alphabet Letter */}
+          
+          {/* <div className="flex flex-row justify-evenly">
             <div className="text-9xl flex flex-col justify-center alphabet-outline">
               <div className="lg:px-8 px-2">
                 <p>A</p>
               </div>
             </div>
-            {/* ASL Letter */}
             <div className="alphabet-outline lg:p-8 p-0 flex flex-col justify-center">
               <Sign value="A" color="black" className="lg:w-28 w-20"/>
             </div>
-          </div>
+          </div> */}
 
 
           {/* Prediction Info */}
@@ -162,7 +161,7 @@ function Learn()
 
       {/* Webcam Output */}
       <div className="flex flex-col justify-center align-middle items-center text-center gap-1">
-        <p className="text-2xl">Make the letter with your hand</p>
+        <p className="text-2xl">Currently a work in progress!</p>
         <canvas className="border-12 border-green-module-text border-solid rounded-3xl max-w-full lg:max-w-full" width={640} height={500} ref={canvasRef}/> 
       </div>
       <Webcam ref={webCamRef} />
